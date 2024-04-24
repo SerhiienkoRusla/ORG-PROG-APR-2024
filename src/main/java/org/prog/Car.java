@@ -8,7 +8,7 @@ public class Car implements IMovable {
     public void goTo() {
         System.out.println(color + " car goes somewhere");
     }
-
+///////
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Car) {
