@@ -15,8 +15,10 @@ public class Car implements IMovable {
             if (this.color == null || this.plateNumber == null) {
                 throw new RuntimeException("Car color OR plate number is empty!");
             }
-            boolean match = this.color.equals(((Car) obj).color)
-                    && this.plateNumber.equals(((Car) obj).plateNumber);
+            boolean match;
+            if (this.color.equals(((Car) obj).color)
+                    && this.plateNumber.equals(((Car) obj).plateNumber)) match = true;
+            else match = false;
             return match;
         }
         return false;
