@@ -8,15 +8,17 @@ public class Car implements IMovable {
     public void goTo() {
         System.out.println(color + " car goes somewhere");
     }
-
+///////
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Car) {
             if (this.color == null || this.plateNumber == null) {
                 throw new RuntimeException("Car color OR plate number is empty!");
             }
-            boolean match = this.color.equals(((Car) obj).color)
-                    && this.plateNumber.equals(((Car) obj).plateNumber);
+            boolean match;
+            if (this.color.equals(((Car) obj).color)
+                    && this.plateNumber.equals(((Car) obj).plateNumber)) match = true;
+            else match = false;
             return match;
         }
         return false;
