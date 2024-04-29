@@ -21,6 +21,7 @@ public class CollectionsDemo {
         Car car1 = new Car();//bob
         car1.color = "red";
         car1.plateNumber = "A001";
+        car1.plateNumber= "bobCar A001";
         Car car2 = new Car();//bob+alice
         car2.color = "yellow";
         car2.plateNumber = "B002";
@@ -47,6 +48,7 @@ public class CollectionsDemo {
             Set<Car> cars = ownedCars.get(key);
             for (Car c : cars) {
                 System.out.println(c.color);
+                System.out.println(c.plateNumber);
             }
         }
     }
